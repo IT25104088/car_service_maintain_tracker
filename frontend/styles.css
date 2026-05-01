@@ -388,6 +388,27 @@ tr:last-child td {
     color: #666;
 }
 
+.reminder-block {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.reminder-block label {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 6px;
+}
+
+.reminder-block input.reminder-mileage {
+    width: 100%;
+    margin-top: 4px;
+    padding: 6px 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
 /* Modal */
 .modal {
     position: fixed;

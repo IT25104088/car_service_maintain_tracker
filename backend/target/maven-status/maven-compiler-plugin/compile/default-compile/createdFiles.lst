@@ -3,11 +3,13 @@ com/cartracker/model/ElectricVehicleReminder.class
 com/cartracker/repository/FileBasedRepository.class
 com/cartracker/CarTrackerApplication.class
 com/cartracker/CarTrackerApplication$1.class
+com/cartracker/service/ReminderService.class
 com/cartracker/model/Vehicle.class
 com/cartracker/repository/ServiceRecordRepository.class
 com/cartracker/model/ServiceReminder.class
 com/cartracker/service/ServiceService.class
 com/cartracker/model/ServiceRecord.class
+com/cartracker/controller/ReminderController.class
 com/cartracker/controller/VehicleController.class
 com/cartracker/service/VehicleService.class
 com/cartracker/controller/ServiceController.class

@@ -499,9 +499,58 @@ async function updateAnalytics() {
                 <p><strong>Total Spent:</strong> $${vehicleTotalCost.toFixed(2)}</p>
                 <p><strong>Last Service:</strong> ${lastService ? formatDate(lastService.serviceDate) : 'None'}</p>
                 <p><strong>Type:</strong> ${vehicle.type}</p>
+                <div class="reminder-block" data-vehicle-id="${vehicle.id}">
+                    <p><strong>Service Reminder</strong></p>
+                    <label>Current Mileage:
+                        <input type="number" min="0" class="reminder-mileage" placeholder="enter current mileage"
+                               oninput="loadReminder('${vehicle.id}')">
+                    </label>
+                    <div class="reminder-output" style="margin-top:8px; color:#555;">
+                        <em>Loading…</em>
+                    </div>
+                </div>
             </div>
         `;
     }).join('');
+
+    vehicles.forEach(v => loadReminder(v.id));
+}
+
+async function loadReminder(vehicleId) {
+    const block = document.querySelector(`.reminder-block[data-vehicle-id="${vehicleId}"]`);
+    if (!block) return;
+    const input = block.querySelector('.reminder-mileage');
+    const output = block.querySelector('.reminder-output');
+
+    let url = `${API_BASE_URL}/reminders/${vehicleId}`;
+    if (input.value !== '') {
+        url += `?currentMileage=${encodeURIComponent(input.value)}`;
+    }
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            output.innerHTML = '<em>Could not load reminder</em>';
+            return;
+        }
+        const r = await response.json();
+        if (input.value === '' && r.lastServiceMileage !== undefined) {
+            input.placeholder = `last service: ${r.lastServiceMileage} mi`;
+        }
+        const status = !r.hasServiceHistory
+            ? '<span style="color:#999;">No service history yet</span>'
+            : r.milesUntilService === 0
+                ? '<span style="color:var(--danger-color); font-weight:600;">Service due now</span>'
+                : `<span>Due in <strong>${r.milesUntilService}</strong> mi (~${r.daysUntilService} days)</span>`;
+        output.innerHTML = `
+            ${status}
+            <p style="margin-top:4px; font-size:0.9em;">
+                Interval: ${r.serviceIntervalMiles} mi · Next service at ${r.nextServiceMileage} mi
+            </p>
+        `;
+    } catch (e) {
+        output.innerHTML = '<em>Error loading reminder</em>';
+    }
 }
 
 // =====================
