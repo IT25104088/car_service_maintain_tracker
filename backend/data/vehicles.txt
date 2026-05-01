@@ -1,0 +1,3 @@
+ID|Name|Number|Make|Model|Year|Type
+9a29205e-a698-4c9c-871c-8e2abfb63200|van|45-123|totoya|hillux|2020|ELECTRIC
+014647e2-369f-4c42-8728-f07e5860d3f9|jeep|227-1293|toyota|prado|2000|GASOLINE
