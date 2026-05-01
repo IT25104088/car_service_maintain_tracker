@@ -1,0 +1,15 @@
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/controller/VehicleController.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/repository/FileBasedRepository.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/model/GasolineVehicleReminder.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/repository/VehicleRepository.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/model/ElectricVehicleReminder.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/model/Vehicle.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/service/ReminderService.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/controller/ReminderController.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/model/ServiceRecord.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/service/VehicleService.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/controller/ServiceController.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/model/ServiceReminder.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/service/ServiceService.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/CarTrackerApplication.java
+/Users/kaveeshaathukorala/Projects/GoldGuard/Car-Service-And-Maintenance-Tracker/backend/src/main/java/com/cartracker/repository/ServiceRecordRepository.java
